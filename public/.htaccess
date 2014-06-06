@@ -1,0 +1,12 @@
+php_value memory_limit 500M
+php_value post_max_size 50M
+php_value upload_max_filesize 50M
+php_value max_execution_time 60
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	RewriteCond %{REQUEST_FILENAME} !-f 
+	RewriteCond %{REQUEST_FILENAME} !-d 
+	RewriteRule ^(.*)$ index.php?controller_action=$1 [QSA,L]
+</IfModule>

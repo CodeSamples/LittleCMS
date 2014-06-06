@@ -1,0 +1,1105 @@
+/* 
+        CSS Reset 
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* 
+        LOAD CUSTOM FONT 
+*/
+@font-face {
+    font-family: 'DroidSansRegular';
+    src: url('font/droidsans-webfont.eot');
+    src: url('font/droidsans-webfont.eot?iefix') format('eot'),
+        url('font/droidsans-webfont.ttf') format('truetype'),
+        url('font/droidsans-webfont.svg#webfontzjU3WeCs') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DroidSansBold';
+    src: url('font/droidsans-bold-webfont.eot');
+    src: url('font/droidsans-bold-webfont.eot?iefix') format('eot'),
+        url('font/droidsans-bold-webfont.ttf') format('truetype'),
+        url('font/droidsans-bold-webfont.svg#webfontwkojXOq7') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('font/lato-regular-webfont.eot');
+    src: url('font/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/lato-regular-webfont.ttf') format('truetype'),
+         url('font/lato-regular-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('font/lato-bold-webfont.eot');
+    src: url('font/lato-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/lato-bold-webfont.ttf') format('truetype'),
+         url('font/lato-bold-webfont.svg#latobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('font/lato-light-webfont.eot');
+    src: url('font/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/lato-light-webfont.ttf') format('truetype'),
+         url('font/lato-light-webfont.svg#lato_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*
+    Global layout
+*/
+body {
+    background-color: #DBDBDB;
+    font-size: 15px;
+    font-family: 'DroidSansRegular', Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #333333;
+    min-width: 320px;
+}
+
+body#login .footer {
+    display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    background: url('img/bg-sal-001.gif') top repeat;
+    padding: 1em 0 5em 0;
+    font-size: 0.7em;
+    color: #ffffff;
+    border-top: 0.1em solid #ffffff;
+    box-shadow: 0 0 0.5em #9E9E9E;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.none,
+.no-close .ui-dialog-titlebar-close {
+    display: none;
+}
+
+.pageBlocker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#ffffff;
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+}
+
+.preloader {
+    background: url('img/preloader-001.gif') center no-repeat;
+    width: 48px;
+    height: 48px;
+    margin: auto;
+}
+
+.preloaderSmall {
+    background: url('img/preloader-002.gif') center no-repeat;
+    width: 24px;
+    height: 24px;
+    margin: auto;
+}
+
+.fileUploaderIframe {
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+
+.ui-dialog-no-title-bar .ui-dialog-titlebar {
+    background: none;
+    border: none;
+}
+
+/*
+    Login Page
+*/
+
+.loginHeader {
+    width: 100%;
+    text-align: center;
+    background: url('img/bg-sal-001.gif') top repeat;
+    padding: 1em 0 0.2em 0;
+    font-size: 1.5em;
+    color: #ffffff;
+    border-bottom: 0.1em solid #ffffff;
+    box-shadow: 0 0 0.5em #9E9E9E;
+}
+
+.loginHeader img {
+    margin-left: -235px;
+}
+
+#loginMessages > div {
+    width: 50%;
+    margin: auto;
+    margin-top: 1em; 
+    padding: 0.7em
+}
+
+.homeItemsContainer,
+.loginFormContainer {
+    background-color: #ffffff;
+    width: 50%;
+    margin: 2em auto 7em;
+    border: 1px solid #d5d5d5;
+    box-shadow: 0 0 1em #d5d5d5;    
+    border-radius: 0.3em;
+}
+
+.loginFormContainer {
+    width: 450px;
+    height: 380px;
+    -moz-box-shadow: 3px 3px 4px #ccc;
+    -webkit-box-shadow: 3px 3px 4px #ccc;
+    box-shadow: 3px 3px 4px #ccc;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#666666')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#666666');
+}
+
+@media only screen and (max-width: 550px) {
+    #loginMessages > div,
+    .loginFormContainer {
+        width: 80%;
+    }
+}
+
+.homeItemsTitle,
+.loginFormContainer > h1 {
+    background-color: #f1f2f2;
+    font-size: 16px;
+    color: #333;
+    text-transform: uppercase;
+    padding: 1em;
+    font-family: DroidSansBold,Arial,Helvetica,sans-serif;
+    border-bottom: 1px solid #d5d5d5;
+    color: #222222;
+    font-weight: normal;
+
+}
+
+.loginFormContainer > form {
+    padding: 2em;
+}
+
+.dashboardMainContainer form input[type="text"],
+.dashboardMainContainer form textarea,
+.loginFormContainer > form > label,
+.loginFormContainer > form > input[type="text"],
+.loginFormContainer > form > input[type="password"],
+#editCoupondialog form input[type="text"],
+#editCoupondialog form textarea {
+    clear: both;
+    width: 100%;
+    font-family: DroidSansBold,Arial,Helvetica,sans-serif;
+    font-weight: bold;
+}
+
+.loginFormContainer > p {
+    font-size: 12px;
+    font-family: 'DroidSansRegular', Arial;
+    width: 400px;
+    margin-left: 20px;
+}
+
+.loginFormContainer p.loginBottomText {
+    margin-top: -10px;
+    text-align: right;
+}
+
+.loginFormContainer > p > small > a {
+    text-decoration: none;
+    color: #336699;
+}
+
+.loginFormContainer > p > small > a:hover {
+    text-decoration: none;
+    color: #4D7BCA;
+}
+
+input#loginFormSubmit {
+    color: #6e6e6e;
+    font: bold 12px Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    padding: 7px 12px;
+    position: relative;
+    display: inline-block;
+    text-shadow: 0 1px 0 #fff;
+    -webkit-transition: border-color .218s;
+    -moz-transition: border .218s;
+    -o-transition: border-color .218s;
+    transition: border-color .218s;
+    background: #f3f3f3;
+    background: -webkit-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+    background: -moz-linear-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
+    border: solid 1px #dcdcdc;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    margin-right: 10px;
+    width: 180px;
+}
+
+.dashboardMainContainer form input.smalltext{
+    width: 50px;
+}
+.dashboardMainContainer form input.mediumtext{
+    width: 170px;
+}
+
+.loginFormContainer > form > label {
+    font-size: 0.8em;
+}
+
+.dashboardMainContainer form .dateIcon,
+#editCoupondialog form .dateIcon,
+.dashboardMainContainer form input[type="text"],
+.dashboardMainContainer form textarea,
+#editCoupondialog form textarea,
+#editCoupondialog form input[type="text"],
+.loginFormContainer > form > input[type="text"],
+.loginFormContainer > form > input[type="password"] {
+    padding: 0.3em 0;
+    font-size: 1em;
+    outline: 0;
+    border: 1px solid #d5d5d5;
+    border-radius: 0.3em;
+    box-shadow: 0 0 0.3em #d5d5d5 inset;
+    margin-bottom: 1em;
+}
+
+
+/*
+    Dashboard Home
+*/
+.dashboardHeaderTop {
+    background: url('img/bg-sal-001.gif') top repeat;
+    font-size: 0.75em;
+    font-family: DroidSansBold,Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 1em 2em 0 2em;
+    position: relative;
+    border-bottom: 0.1em solid #ffffff;
+    box-shadow: 0 0 0.5em #9E9E9E;
+}
+
+@media only screen and (max-width: 550px) {
+    .dashboardHeaderTop {
+        padding-bottom: 18em;
+    }
+}
+
+/*
+Tables
+*/
+.tableContainer{
+    margin: 20px;
+}
+
+.homeItemsContainer {
+    padding: 2em;
+}
+
+.homeItemsTitle {
+    line-height: 6em;
+    background-color: #646B7E;
+    color: #ffffff;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+.dashboardMainContainer {
+    width: 90%;
+    font-size: 0.85em;
+    margin: 2em auto 7em auto;
+}
+
+@media only screen and (max-width: 750px) {
+    .dashboardMainContainer {
+        font-size: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .dashboardMainContainer {
+        font-size: 0.3em;
+    }
+}
+
+/*
+ *  Dashboard manager
+ */
+
+.dashboardMainContainer #pendingAdvice {
+    padding: 1em;
+    border-radius: 0.5em;
+    margin: 0 0 1em 0;
+    font-size: 1.1em;
+}
+
+.dashboardMainContainer form,
+#editCoupondialog form {
+    font-family: DroidSansRegular,Arial,Helvetica,sans-serif;
+    color:#666666;
+} 
+
+.dashboardMainContainer h1 {
+    font-size: 1.3em;
+    color:#555;
+    margin-bottom: 0.5em;
+    font-family: DroidSansBold,Arial,Helvetica,sans-serif;
+}
+
+.dashboardMainContainer form label,
+#editCoupondialog form label {
+    font-size: 1.1em;
+}
+
+.dashboardMainContainer form img,
+#editCoupondialog form img {
+    vertical-align: top;
+    height: auto;
+}
+
+.dashboardMainContainer form > div {
+    border-bottom: 1px dotted #d5d5d5;
+    padding-bottom: 1em;
+}
+
+.dashboardMainContainer form > div.last {
+    border-bottom: none;
+    padding-bottom: 0;   
+}
+
+.dashboardMainContainer form div,
+#editCoupondialog form div {
+    margin-bottom: 1em;
+}
+
+.dashboardMainContainer form div.jqte_editor {
+    margin: 0;
+}
+
+.dashboardMainContainer form > div > div {
+    margin-right: 2em;
+}
+
+.dashboardMainContainer form > div > div.jqte {
+    margin-right: 0;
+}
+
+.dashboardMainContainer form input[type="file"],
+#editCoupondialog form input[type="file"] {
+    font-size: 0.8em;
+    font-family: DroidSansRegular;
+    margin: 0;
+}
+
+#editCoupondialog form input[type="text"].date,
+.dashboardMainContainer form input[type="text"].date {
+    width: 89%;
+}
+
+.dashboardMainContainer form .dateIcon {
+    width: 10%;
+    margin-top: 2px;
+    padding: 0.5em 0;
+}
+
+.dashboardMainContainer form .addButton,
+.dashboardMainContainer form .deleteButton,
+.dashboardMainContainer form #addDatedOffer,
+#datedOfferContainer .datedOffer .removeOfferButton,
+#datedOfferContainer .datedOffer .datepicker {
+    font-size: 0.8em;
+    margin-top: 0.3em;
+}
+
+.dashboardMainContainer form .vidItem,
+.dashboardMainContainer form .imgItem {
+    float: left;
+    margin: 0 1em 0 0;
+}
+
+.dashboardMainContainer form .vidItem {
+    cursor: pointer;
+}
+
+#videoViewer {
+    overflow: hidden;
+}
+
+#videoViewer iframe {
+    width: 560px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+}
+
+.dashboardMainContainer form .submitContainer {
+    padding: 2em;
+    text-align: center;
+}
+
+.dashboardMainContainer form .submitContainer input[type="submit"] {
+    padding: 0.75em 2em;
+}
+
+.dashboardMainContainer .restaurantSelectorInfo {
+    font-size: 0.9em;
+    padding-bottom: 2em;
+}
+
+#restaurantSelector #selectable {
+    font-size: 0.9em;
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    width: 100%;
+}
+
+.assignmentContainer ul li,
+#restaurantSelector #selectable li {
+    border: 1px solid #d5d5d5;
+    padding: 0.5em;
+    margin: 0.5em;
+    color: #666666;
+    cursor: pointer;
+}
+
+#restaurantSelector #selectable li a {
+    color: inherit;
+}
+
+#restaurantSelector #selectable .ui-selecting { 
+    background: #c9c9c9; 
+}
+
+.assignmentContainer ul li.selected,
+#restaurantSelector #selectable .ui-selected { 
+    background: #FF0000; color: white; 
+}
+
+.dashboardMainContainer form .franchiseCouponItem,
+#editCoupondialog .franchiseCouponItem {
+    width: 29%;
+    margin-right: 1%;
+    font-size: 0.9em;
+    padding: 2%;
+    border: 1px dotted #d5d5d5;
+    border-radius: 0.5em;
+}
+
+#couponPreviewDialog {
+    font-size: 15px;
+    overflow: visible;
+    display: none;
+    position: relative;
+}
+
+#couponPreviewDialog > h1 {
+    color: #EE2814;
+    font-family: Lato-Light, Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    position: absolute;
+    top: -22px;
+    font-weight: bold;
+}
+
+#couponPreviewDialog > .couponContainer > .image {
+    width: 260px;
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+#couponPreviewDialog > .couponContainer > .image img {
+    width: 100%;
+    height: auto;
+}
+
+#couponPreviewDialog > .couponContainer > .txt {
+    float: left;
+    margin-left: 2em;
+}
+
+#couponPreviewDialog > .couponContainer > .txt h2 {
+    font-family: Lato-Bold, Arial, Helvetica, sans-serif;
+    color: #000;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#couponPreviewDialog > .couponContainer > .txt p {
+    font-family: Lato-Regular, Arial, Helvetica, sans;
+    color: #EE2814;
+    font-size: 1.1em;
+}
+
+#couponPreviewDialog > .couponContainer > .txt .couponTxt {
+    color: #666666;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+#editCoupondialog .franchiseCouponItem {
+    width: 96%;
+}
+
+.dashboardMainContainer form .franchiseCouponList {
+    width: 65%;
+    margin: 0;
+}
+
+.dashboardMainContainer form .franchiseCouponList td {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.couponImagePreloader {
+    background: url('img/preloader-001.gif') center no-repeat;
+}
+
+.dashboardMainContainer form .franchiseCouponList .tableContainer,
+.dashboardMainContainer form .franchiseCouponList .tableContainer .jtable-title {
+    margin: 0;
+}
+
+.dashboardMainContainer #approval table {
+    font-size: 13px;
+    font-family: DroidSansRegular, Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    color: #666;
+    margin: auto;
+}
+
+.dashboardMainContainer #approval table thead {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 1em;
+}
+
+.dashboardMainContainer #approval table thead th {
+    border: 1px dotted #d5d5d5;
+    padding: 0.5em;
+    background-color: #FF0808;
+    color: #fff;
+}
+
+.dashboardMainContainer #approval table tr td a {
+    font-size: 0.8em;
+    padding-top: 0.2em;
+}
+
+.dashboardMainContainer #approval table tr td {
+    border: 1px dotted #d5d5d5;
+    padding: 0.5em 0.75em;
+}
+
+@media only screen and (max-width: 799px) {
+    .dashboardMainContainer form .franchiseCouponItem {
+        width: 96%;
+        text-align: center;
+    }
+
+    .dashboardMainContainer form .franchiseCouponList {
+        width: 100%;
+    }
+
+    .dashboardMainContainer form .franchiseCouponItem,
+    .dashboardMainContainer form .franchiseCouponList {
+        clear: both;
+    }
+}
+
+#commentsContainer,
+#restaurantSocialSelector {
+    width: 70%;
+}
+
+#restaurantSocialSelector,
+#restaurantDetailSelector {
+    border: 1px dotted #FFBDBD;
+}
+
+#restaurantSocialSelector > label,
+#restaurantDetailSelector > label {
+    margin: 0 1em;
+    color: #747474;
+}
+
+#restaurantSocialSelector > select,
+#restaurantDetailSelector > select {
+    margin: 1em 0;
+}
+
+@media only screen and (max-width: 580px) {
+    #commentsContainer,
+    #ratingsContainer {
+        float: none;
+        clear: both;
+        width: 80% !important;
+        margin: auto;
+    }
+
+    #ratingsContainer {
+        text-align: center;
+    }
+
+    #ratingsContainer > ul > ul.stars {
+        width: 120px;
+        margin: auto;       
+    }
+
+    
+}
+
+#commentsContainer {
+    height: 500px;
+    overflow: auto;
+    margin-top: 1em;
+    box-shadow: inset 0 0 1em #d5d5d5;
+}
+
+#commentsContainer .button {
+    font-size: 0.8em;
+    margin: 1em 0 0 0;
+}
+
+#commentsContainer > div {
+    border: 1px dotted #d5d5d5;
+    margin: 1em 1em 0 1em;
+    padding: 1em;
+}
+
+#commentsContainer > h1 {
+    border: none;
+    margin: 1em 0 0 1em;
+    padding: 0;
+}
+
+#commentsContainer > label {
+    font-family: DroidSansRegular, Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    color: #929292;
+    margin: 0 0 0 1.5em;
+}
+
+#commentsContainer .img {
+    width: 10%;
+}
+
+#commentsContainer .img img {
+    vertical-align: middle;
+    border: 0.3em solid #999;
+    margin-right: 1em;
+    width: 100%;
+    height: auto;
+    max-width: 40px;
+}
+
+#commentsContainer .txt {
+    width: 86%;
+}
+
+#commentsContainer .txt .timestamp,
+#commentsContainer .txt .userName {
+    font-size: 0.9em;
+    color: #999;
+}
+
+#commentsContainer .txt .timestamp {
+    font-family: DroidSansRegular, Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+}
+
+#commentsContainer .txt .comment {
+    font-family: DroidSansRegular, Arial, Helvetica, sans-serif;
+}
+
+#ratingsContainer {
+    width: 24%;
+    background-color: #F8F8F8;
+    border: 1px dashed #d5d5d5;
+    padding: 2% 2%;
+}
+
+#ratingsContainer > ul {
+    list-style: none;
+    margin: 0 0 1em 0;
+    clear: both;
+}
+
+#ratingsContainer > ul > li.catTitle {
+    font-family: DroidSansRegular, Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+#ratingsContainer > ul > ul.stars {
+    list-style: inherit;
+    height: 21px;
+    overflow: hidden;
+}
+
+#ratingsContainer > ul > ul.stars > li.star {
+    width: 21px;
+    height: 21px;
+    float: left;
+    margin-right: 2px;
+    background-image: url('img/rating-stars');
+    background-repeat: no-repeat;
+}
+
+#ratingsContainer > ul > ul.stars > li.star.full {
+    background-position: -42px 0;
+}
+
+#ratingsContainer > ul > ul.stars > li.star.half {
+    background-position: -21px 0;   
+}
+
+#ratingsContainer > ul > ul.stars > li.star.empty {
+    background-position: 0 0;
+}
+
+#ratingsContainer > ul > li.txtInfo {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.datedOffer {
+    width: 44%;
+    border: 1px dotted #d5d5d5;
+    padding: 2%;
+    border-radius: 0.5em;
+    float: left;
+    margin: 0 2% 0 0;
+}
+
+@media only screen and (max-width: 580px) {
+    .datedOffer {
+        width: 98%;
+        margin: 0;
+    }
+}
+
+.datedOffer:nth-child(even) {
+    margin: 0;
+}
+
+#datedOfferContainer .datedOffer input[type="text"] {
+    margin: 0;
+}
+
+
+#header_menu{
+  width: 700px;
+  margin: auto;
+  height: 50px;
+}
+#header_menu span.logo{
+  float: left;
+  width: 150px;
+}
+#header_menu span.logo img{
+  float: left;
+  width: 60px;
+}
+#header_menu span.logo div{  
+  text-decoration: none;
+  color: #fff;
+  margin: 35px 0px 5px 5px;
+}
+#header_menu ul{
+  padding-top: 7px;
+}
+#header_menu ul li{
+  float: left;   
+  width: auto;
+  padding: 8px;
+  text-align: center;
+  list-style-type: none;
+  font-size: 1.1em;
+}
+#header_menu ul li.image{
+  padding: 5px 15px 5px 15px;
+}
+#header_menu ul li a{
+  text-decoration: none;  
+  color: #fff;
+  text-align: center;
+  padding: 9px;  
+}
+#header_menu ul li a.disabled{
+  color: #FFADAD;
+  cursor: default;
+}
+#header_menu ul li a.disabled:hover{
+    background: none;
+    border: none;
+    padding: 9px;   
+}
+
+#header_menu ul li a:hover{
+  background: rgba(240, 212, 212, .3);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 8px; 
+}
+#header_menu ul li a.image{
+  padding: 0px;
+}
+#header_menu ul li a.image:hover{
+  background: none;
+  border: none;
+}
+#welcome{
+    font-size: 0.8em;
+    margin: 10px auto 0px auto;
+    width: 600px;
+}
+@media only screen and (max-width: 550px) {
+
+    #header_menu {
+        width: 100%;    
+    }
+    
+    #header_menu ul {
+        clear:both;
+    }
+
+    #header_menu ul li {
+        float: none;
+    }
+
+}
+/*
+ * Packages and features
+ */
+#dialog-confirm{
+    display: none;
+}
+.form-package-features ul li{
+    list-style-type: none;
+    color: #333;
+}
+.form-package-features ul li label{
+    float: left;
+    width: 200px;
+    text-align: right;
+    padding: 5px 5px 0px 0px;
+}
+.form-package-features ul li div.input{
+    float: left;
+    width: 300px;
+}
+.form-package-features input[type="submit"]{
+    float: right;
+    width: 100px;
+}
+.package-item{
+    min-height: 100px;
+}
+.package-features{
+    padding: 5px 0px 10px 0px;
+}
+.form-package-features ul li{
+    background-color: #eee;
+    border: 1px solid #999;
+    background-color: #eee;
+    margin: 5px 5px 10px 5px;
+    border-radius: 5px;
+    padding: 5px;
+    height: 30px;
+    list-style-type: none;
+    clear: both;
+}
+#features-list{
+}
+#features-list ul li.feature{
+    border: 1px solid #999;
+    background-color: #efefef;
+    margin: 5px 5px 10px 5px;
+    border-radius: 5px;
+    padding: 5px;
+    list-style-type: none;
+    float: left;
+    width: 290px;
+    height: 180px;
+    color: #333;
+}
+#features-list ul li.feature ul li{
+    margin: 5px 5px 0px 5px;
+    list-style-type: none;
+}
+.feature-delete-button{
+        float: right;
+        margin: 3px;
+}
+
+.assignmentContainer {
+    font-family: DroidSansRegular, Arial, Helvetica, sans-serif;
+}
+
+.assignmentContainer ul {
+    list-style: none;
+    width: 50%;
+    height: 500px;
+    overflow: auto;
+}
+
+.assignmentContainer .filter {
+    margin: 0.5em;
+}    
+
+.assignmentContainer .filter h2 {
+    color: #999999;
+}
+
+.assignmentContainer .filter input[type="text"] {
+    margin: 0;
+    border: 1px solid #d5d5d5;
+    padding: 0.5em;
+    width: 98%;
+}
+
+.assignmentContainer > .options {
+    width: 46%;
+    padding: 0 2%;
+}
+
+.assignmentContainer > .options h2 {
+    margin: 1em 0 0 0;
+    font-size: 1.2em;
+}
+
+.assignmentContainer > .options .dashboardInputContainer {
+    font-size: 0.9em;
+}
+
+@media only screen and (max-width: 550px) {
+    .assignmentContainer > .options,
+    .assignmentContainer ul {
+        width: 100%;
+    }
+
+    .assignmentContainer ul {
+        height: 250px;
+    }
+}
+
+.assignmentContainer ul li.selected:hover {
+    background-color: #FF0000;
+}
+
+.assignmentContainer ul li:hover {
+    background-color: #FFF4F4;
+}
+
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { float: left; clear:left; padding: 0 0 0 5px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 45%; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; padding: 0 5px 0 0; }
+.ui-timepicker-rtl dl dt{ float: right; clear: right; }
+.ui-timepicker-rtl dl dd { margin: 0 45% 10px 10px; }
+
+#jtable-edit-form .disabled {
+    outline: none;
+    border: none;
+    background: none !important;
+    color: #999;
+}
+input.disabled:-webkit-autofill {
+    background: none !important;
+}
+
+/*
+* Buttons
+*/
+
+.primary-button{
+    border: 1px solid #FF2B2B;
+    border-radius: 4px;
+    background-color: #f04040;
+    color: #fff;
+    padding: 3px;
+    cursor: pointer;
+}
+.secondary-button{
+    border: 1px solid #888;
+    border-radius: 4px;
+    background-color: #eee;
+    color: #fff;
+    padding: 3px;
+    text-decoration: none;   
+}
+
+#packages_filter, #food_filter{
+    float: left;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+    padding: 5px;
+    color: #777;
+    width: auto;
+    height: 25px;
+}
